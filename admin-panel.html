@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB System S.A.S. - Panel de Administración</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-panel-body">
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="Img\logo\logo-sb-system.png" alt="Logo SB System S.A.S.">
+                <span>SB System S.A.S.</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-item">Dashboard</a></li>
+                    <li><a href="#" class="nav-item active">Servicios</a></li>
+                    <li><a href="#" class="nav-item">Usuarios</a></li>
+                    <li><a href="admin-login.html" class="nav-item logout">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-content-header">
+                <h1>Gestión de Servicios</h1>
+                <button class="btn btn-primary add-service-btn">Agregar nuevo servicio</button>
+            </header>
+
+            <section class="services-management">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Servicio</th>
+                            <th>Precio</th>
+                            <th>Plazo</th>
+                            <th>Estado</th>
+                            <th>Responsable</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Desarrollo de Páginas Web</td>
+                            <td>$1.500.000 COP</td>
+                            <td>04 Abr 2026</td>
+                            <td>En proceso</td>
+                            <td>Ing. Cristian Garzon</td>
+                            <td>
+                                <button class="btn btn-secondary btn-small">Editar</button>
+                                <button class="btn btn-danger btn-small">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Soporte Técnico Empresarial</td>
+                            <td>$500.000 COP</td>
+                            <td>18 Oct de 2025</td>
+                            <td>En revision</td>
+                            <td>Ing. Samantha Reyes</td>
+                            <td>
+                                <button class="btn btn-secondary btn-small">Editar</button>
+                                <button class="btn btn-danger btn-small">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Migración a la Nube (Cloud Services)</td>
+                            <td>$1.800.000 COP</td>
+                            <td>02 May de 2026</td>
+                            <td>Por Iniciar</td>
+                            <td>Pendiente</td>
+                            <td>
+                                <button class="btn btn-secondary btn-small">Editar</button>
+                                <button class="btn btn-danger btn-small">Eliminar</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

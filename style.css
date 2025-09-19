@@ -1,0 +1,485 @@
+/* ============================================= */
+/* ESTILOS GLOBALES Y VARIABLES         */
+/* ============================================= */
+:root {
+    --primary-blue: #0D47A1;
+    --dark-gray: #212121;
+    --light-gray: #BDBDBD;
+    --white: #FFFFFF;
+    --danger-red: #D32F2F;
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--dark-gray);
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+/* ============================================= */
+/* COMPONENTES REUTILIZABLES        */
+/* ============================================= */
+
+/* --- Botones --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #0b3a82;
+}
+
+.btn-secondary {
+    background-color: var(--primary-blue); /* Cambiado a azul */
+    color: var(--white);                  /* Cambiado a blanco para contraste */
+}
+
+.btn-secondary:hover {
+    background-color: #a9a9a9;
+}
+
+.btn-danger {
+    background-color: var(--danger-red);
+    color: var(--white);
+}
+
+.btn-danger:hover {
+    background-color: #b92a2a;
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+
+/* --- Header y Navegación --- */
+.main-header {
+    background-color: var(--dark-gray); /* Cambiado a gris oscuro */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white); /* Cambiado de dark-gray a white */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: var(--white); /* Añadido para el contraste */
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.main-nav ul li a.active {
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+
+/* --- Footer --- */
+.main-footer {
+    background-color: var(--primary-blue); /* Cambiado a azul primario */
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between; /* Mantiene el espaciado entre elementos */
+    align-items: center;
+}
+
+.footer-info a {
+    color: var(--white);
+}
+
+.social-links img {
+    height: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    text-align: left;    /* Alinea el texto a la izquierda */
+    flex: 1;             /* Asigna espacio flexible */
+    font-size: 0.9em;
+}
+
+.social-links {
+    text-align: center;  /* Centra los íconos */
+    flex: 1;             /* Asigna espacio flexible */
+}
+
+.footer-info {
+    text-align: right;   /* Alinea el texto a la derecha */
+    flex: 1;             /* Asigna espacio flexible */
+}
+
+/* ============================================= */
+/* ESTILOS PÁGINA: HOME             */
+/* ============================================= */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.slider-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.slider-arrow.prev { left: 10px; }
+.slider-arrow.next { right: 10px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--primary-blue);
+}
+
+.company-description {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+/* ============================================= */
+/* ESTILOS PÁGINA: SERVICIOS           */
+/* ============================================= */
+.services-list {
+    padding: 2rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--light-gray); /* Un gris claro, más suave que el del botón */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.service-card .price {
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 0.5rem 0;
+}
+
+/* ============================================= */
+/* ESTILOS PÁGINA: DETALLE SERVICIO       */
+/* ============================================= */
+.service-detail {
+    padding: 2rem 0;
+}
+
+.detail-content {
+    display: flex;
+    gap: 2rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.service-info .detail-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.service-info .promotion {
+    background-color: #e8f5e9;
+    color: #388e3c;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.service-info .availability {
+    margin-top: 1rem;
+    color: #555;
+}
+
+.btn-request-service {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+/* ============================================= */
+/* ESTILOS PÁGINA: ADMIN LOGIN         */
+/* ============================================= */
+.admin-login-body {
+    background-color: var(--primary-blue);
+}
+
+.admin-login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Ajustar según altura de header/footer */
+}
+
+.login-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.forgot-password-link {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.9em;
+}
+
+/* ============================================= */
+/* ESTILOS PÁGINA: ADMIN PANEL          */
+/* ============================================= */
+.admin-panel-body {
+    background-color: var(--white);
+}
+
+.admin-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--dark-gray);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+.sidebar-header {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-header img { height: 40px; }
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav .nav-item {
+    display: block;
+    padding: 1rem;
+    color: var(--white);
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav .nav-item:hover,
+.sidebar-nav .nav-item.active {
+    background-color: var(--primary-blue);
+}
+
+.sidebar-nav .logout {
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+.admin-content {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.admin-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f4f4f4;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
