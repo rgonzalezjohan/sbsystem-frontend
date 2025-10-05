@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "nombre": "Desarrollo de Páginas Web",
+    "precio": "Precio: $1.500.000 COP",
+    "imagen": "img/servicios/card-desarrollo-web.jpg",
+    "descripcion": "Diseño y desarrollo de páginas web responsivas con HTML, CSS y JavaScript, optimizadas para SEO.",
+    "disponibilidad": "10 proyectos mensuales",
+    "promocion": "10% de descuento en el primer proyecto"
+  },
+  {
+    "id": 2,
+    "nombre": "Soporte Técnico Empresarial",
+    "precio": "Precio: $500.000 COP/mes",
+    "imagen": "img/servicios/card-soporte-tecnico.jpg",
+    "descripcion": "Asistencia técnica remota y presencial para garantizar la operatividad de tus sistemas.",
+    "disponibilidad": "Soporte 24/7",
+    "promocion": "Ninguna"
+  },
+  {
+    "id": 3,
+    "nombre": "Consultoría en Ciberseguridad",
+    "precio": "Precio: $2.000.000 COP",
+    "imagen": "img/servicios/card-ciberseguridad.jpg",
+    "descripcion": "Protección avanzada para tus activos digitales contra amenazas y vulnerabilidades.",
+    "disponibilidad": "Consultoría inmediata",
+    "promocion": "Auditoría inicial gratuita"
+  },
+  {
+    "id": 4,
+    "nombre": "Migración a la Nube (Cloud Services)",
+    "precio": "Precio: $1.800.000 COP",
+    "imagen": "img/servicios/card-cloud-computing.jpg",
+    "descripcion": "Migración y gestión de infraestructuras en la nube para máxima escalabilidad y eficiencia.",
+    "disponibilidad": "5 migraciones por mes",
+    "promocion": "Ninguna"
+  },
+  {
+    "id": 5,
+    "nombre": "Aplicaciones Móviles (Android/iOS)",
+    "precio": "Precio: $3.200.000 COP",
+    "imagen": "img/servicios/card-apps-moviles.jpg",
+    "descripcion": "Desarrollo de aplicaciones nativas e híbridas para iOS y Android.",
+    "disponibilidad": "3 proyectos en paralelo",
+    "promocion": "20% en segunda app"
+  },
+  {
+    "id": 6,
+    "nombre": "Desarrollo de Chatbots con IA",
+    "precio": "Precio: $2.500.000 COP",
+    "imagen": "img/servicios/card-consultoria-ti.jpg",
+    "descripcion": "Asesoramiento estratégico para alinear tu tecnología con tus objetivos de negocio.",
+    "disponibilidad": "Agendamiento flexible",
+    "promocion": "Ninguna"
+  },
+  {
+    "id": 7,
+    "nombre": "Análisis de Datos",
+    "precio": "Precio: $1.200.000 COP",
+    "imagen": "img/servicios/card-analisis-datos.jpg",
+    "descripcion": "Transformamos tus datos en información valiosa para la toma de decisiones.",
+    "disponibilidad": "Proyectos bajo demanda",
+    "promocion": "Dashboard de ejemplo gratuito"
+  },
+  {
+    "id": 8,
+    "nombre": "Administración de Servidores y Redes",
+    "precio": "Precio: $1.000.000 COP/mes",
+    "imagen": "img/servicios/card-redes.jpg",
+    "descripcion": "Diseño, implementación y mantenimiento de redes corporativas seguras y eficientes.",
+    "disponibilidad": "Atención inmediata",
+    "promocion": "Ninguna"
+  },
+  {
+    "id": 9,
+    "nombre": "Mantenimiento de Sistemas",
+    "precio": "Precio: $1.600.000 COP",
+    "imagen": "img/servicios/card-mantenimiento.jpg",
+    "descripcion": "Planes de mantenimiento preventivo y correctivo para servidores y estaciones de trabajo.",
+    "disponibilidad": "Planes mensuales",
+    "promocion": "1 mes gratis en plan anual"
+  },
+  {
+    "id": 10,
+    "nombre": "Inteligencia de Negocios (E-commerce)",
+    "precio": "Precio: $2.200.000 COP",
+    "imagen": "img/servicios/card-inteligencia-negocios.jpg",
+    "descripcion": "Implementación de herramientas de BI para la visualización y análisis de KPIs.",
+    "disponibilidad": "Proyectos trimestrales",
+    "promocion": "Ninguna"
+  }
+]

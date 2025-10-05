@@ -81,6 +81,39 @@ document.addEventListener('DOMContentLoaded', () => {
         startSlider();
     }
 
+    /* ==========================================================================
+       FUNCIONALIDAD PARA CARGAR SERVICIOS DESDE JSON (servicios.html)
+       ========================================================================== */
+    const servicesGrid = document.querySelector('.services-grid');
+
+    // Verificamos que estamos en la página de servicios antes de ejecutar
+    if (servicesGrid) {
+        // Usamos fetch para obtener los datos del archivo JSON
+        fetch('servicios.json')
+            .then(response => response.json()) // Convertimos la respuesta a formato JSON
+            .then(data => { // 'data' ahora contiene la lista de servicios
+                // Vaciamos el contenedor por si acaso
+                servicesGrid.innerHTML = ''; 
+                // Recorremos cada servicio de la lista
+                data.forEach(servicio => {
+                    // Creamos un nuevo div para la tarjeta del servicio
+                    const card = document.createElement('div');
+                    card.className = 'service-card';
+
+                    // Creamos el contenido HTML de la tarjeta usando los datos del servicio
+                    card.innerHTML = `
+                        <img src="${servicio.imagen}" alt="Servicio de ${servicio.nombre}">
+                        <h3>${servicio.nombre}</h3>
+                        <p class="price">${servicio.precio}</p>
+                        <a href="detalle-servicio.html" class="btn btn-secondary">Ver más</a>
+                    `;
+
+                    // Añadimos la tarjeta al contenedor en la página
+                    servicesGrid.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error al cargar los servicios:', error)); // Manejo de errores en caso de que falle
+    }
 
     /* ==========================================================================
        FUNCIONALIDAD PARA EL FORMULARIO DE LOGIN (admin-login.html)
